@@ -1,2 +1,2 @@
 # Jogo_da_Velha
-jogo da velha com interface (python)
+jogo da velha feito em python , usando interface grafica do tkinter , usando memes no seu resultado final
