@@ -27,19 +27,7 @@ try:
 	cursor.execute("CREATE TABLE sons(toque char,erro char,resultado char)")
 	
 	cursor.execute(f"INSERT INTO sons(toque , erro ,resultado ) VALUES ('True','True','True')")
-	
-#	cursor.execute("CREATE TABLE backup_sozinho(bk char,bt_0 = char , bt_1 = char, bt_2 = char, bt_3 = char, bt_4 = char, bt_5 = char, bt_6 = char, bt_7 = char, bt_8 = char)")
-	
-#	cursor.execute(f"INSERT INTO backup_sozinho( bk ,bt_0 , bt_1 , bt_2 , bt_3 , bt_4 , bt_5 , bt_6 , bt_7 , bt_8 ) VALUES ('false','','','','','','','','','')")
-	
-#	cursor.execute("CREATE TABLE backup_normal(bk char,bt_0 = char , bt_1 = char, bt_2 = char, bt_3 = char, bt_4 = char, bt_5 = char, bt_6 = char, bt_7 = char, bt_8 = char)")
-	
-#	cursor.execute(f"INSERT INTO backup_normal( bk ,bt_0 , bt_1 , bt_2 , bt_3 , bt_4 , bt_5 , bt_6 , bt_7 , bt_8 ) VALUES ('false','','','','','','','','','')")
-	
-#	cursor.execute("CREATE TABLE backup_local(bk char,bt_0 = char , bt_1 = char, bt_2 = char, bt_3 = char, bt_4 = char, bt_5 = char, bt_6 = char, bt_7 = char, bt_8 = char)")
-	
-	#cursor.execute(f"INSERT INTO backup_local( bk ,bt_0 , bt_1 , bt_2 , bt_3 , bt_4 , bt_5 , bt_6 , bt_7 , bt_8 ) VALUES ('false','','','','','','','','','')")
-	
+
 	banco.commit()
 except:
 	pass
@@ -99,7 +87,7 @@ sec = None
 master2=tk
 resolucao=""
 
-caminho_imagem_fundo='/storage/emulated/0/pydroid/jogo da velha/image/images (16).jpeg'#'/storage/emulated/0/Download/fundo.jpeg'
+caminho_imagem_fundo='image/images (16).jpeg'
 
 
 def porcento(comprimento,por):
