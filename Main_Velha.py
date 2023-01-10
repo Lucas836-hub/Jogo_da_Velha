@@ -11,6 +11,7 @@ from random import randint
 import pygame
 from datetime import datetime
 from PIL import Image, ImageTk
+import os
 
 banco = sqlite3.connect("save_game.db")
 cursor = banco.cursor()
