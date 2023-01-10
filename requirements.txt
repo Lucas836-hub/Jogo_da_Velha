@@ -1,7 +1,4 @@
 pygame
-sqlite3
-tkinter
+db-sqlite3
+tk
 Pillow
-datetime
-random
-match
