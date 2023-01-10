@@ -6,7 +6,7 @@ INSTALAÇÃO
 # clonar repositorio
 $ git clone https://github.com/Lucas836-hub/Jogo_da_Velha
 
-# altere o diretório de trabalho para sherlock
+# altere o diretório de trabalho para jogo_da_velha
 $ cd jogo_da_velha
 
 #instale os requerimentos
