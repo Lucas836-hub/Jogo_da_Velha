@@ -1,3 +1,7 @@
+#criado por : Lucas Gabriel
+#Instagram : Lucas_git
+#github : https://github.com/Lucas836-hub/
+
 #aplicativo jogo da velha 11/12/2020sv
 
 # VERSAO 0.9
