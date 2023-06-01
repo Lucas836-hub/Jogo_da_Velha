@@ -90,7 +90,7 @@ resolucao=""
 audio_sair=False
 audio_novamente=False
 
-caminho_imagem_fundo='/storage/emulated/0/pydroid/jogo da velha/image/images (16).jpeg'#'/storage/emulated/0/Download/fundo.jpeg'
+caminho_imagem_fundo='image/images (16).jpeg'
 
 
 def porcento(comprimento,por):
