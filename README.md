@@ -25,10 +25,14 @@ jogo da velha feito em python muito diverto , ele usa áudio de memes para melho
 É um script desenvolvido em python , usando a interface gráfica .
 
 *tkinter* para criação do front-end,
+
 *sqlite3* para salvar os dados dos usuários,
+
 *pygame* para fazer a execução dos arquivos de áudio para melhorar a experiência dos usuários,
+
 *pillow* para a execução de imagens
-também conta com uma mini inteligência artificial.
+
+*Também conta com uma mini inteligência artificial para ser o seu desafiante quando estiver só.*
 
 Se possivel futuramente quero desvolver a parte *local* para jogadoresem uma mesma rede porém sem depender de internet,
 *online* para interação com outros jogadores online , também fazer os devidos justes de interface mais versão site,mais a versão propiamente para android.
