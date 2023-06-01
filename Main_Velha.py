@@ -1,10 +1,6 @@
-#criado por : Lucas Gabriel
-#Instagram : Lucas_git
-#github : https://github.com/Lucas836-hub/
-
 #aplicativo jogo da velha 11/12/2020sv
 
-# VERSAO 0.9
+# VERSAO 1.0
 
 #Para fazer : idioma e cor na frente ao iniciar pela primeira 0 
 import tkinter as tk
@@ -15,7 +11,6 @@ from random import randint
 import pygame
 from datetime import datetime
 from PIL import Image, ImageTk
-import os
 
 banco = sqlite3.connect("save_game.db")
 cursor = banco.cursor()
@@ -62,13 +57,13 @@ bg_geral=[["black","white","black","green"],["white","black","gray","light green
 
 
 # fg  bg   
-idiom=[[" Jogar ", " Configurações ", " Sair ", "<- voltar " , " Salvar " , " Sozinho "," Normal "," Online "," Local "," Fácil "," Médio "," Difício "," Idioma "," Sobre "," Tema "," Português Br"," Espanhol "," Inglês "," Francês "," Branco "," Preto "," Autor : Lucas Gabriel da Silva Lima "," Inicio do projeto : 11/12/2020 ","Este aplicativo foi criado para conhecimento e ele engloba um jogo multiplay com host local , online ou contra boot. ", " Jogar novamente "," ERRO este lugar esta ocupado "," Ser o primeiro a jogar "," Empate "," Você ganhou "," Você perdeu "," Facil "," Medio "," Dificil "," Ganhou "," ERRO : nome inválido "," Máximo de 12 caracteres "," Jogador 1 "," Jogador 2 "," Sons "," Toque "," Erro "," Resultado "," Cinza "," Temporario "," Personalizado ","v : 0.9"]
+idiom=[[" Jogar ", " Configurações ", " Sair ", "<- voltar " , " Salvar " , " Sozinho "," Normal "," Online "," Local "," Fácil "," Médio "," Difício "," Idioma "," Sobre "," Tema "," Português Br"," Espanhol "," Inglês "," Francês "," Branco "," Preto "," Autor : Lucas Gabriel da Silva Lima\nGitHub : Lucas836-hub\nInstagram : @Lucas_git "," Inicio do projeto : 11/12/2020 ","Este aplicativo foi criado para conhecimento ele engloba um jogo dualplay com host local , online ou sozinho. \n ", " Jogar novamente "," ERRO este lugar esta ocupado "," Ser o primeiro a jogar "," Empate "," Você ganhou "," Você perdeu "," Facil "," Medio "," Dificil "," Ganhou "," ERRO : nome inválido "," Máximo de 12 caracteres "," Jogador 1 "," Jogador 2 "," Sons "," Toque "," Erro "," Resultado "," Cinza "," Temporario "," Personalizado ","v : 1.0","OPS !!!\nAINDA ESTA EM DESEMVOLVIMENTO !"]
 
-,["Reproducir", "Configuración", "Salir", "<- atrás", "Guardar", "Solo", "Normal", "En línea", "Local", "Fácil", "Medio", "Agujero"  , "Idioma", "Acerca de", "Tema", "Portugués brasileño", "Español", "Inglés", "Francés", "Blanco", "Negro", "Autor: Lucas Gabriel da Silva Lima", "Inicio  del proyecto: 11/12/2020 "," Esta aplicación fue creada para el conocimiento y abarca un juego multijugador con host local, en línea o contra arranque. "," Jugar de nuevo "," ERROR este lugar es  ocupado "," Sé el primero en jugar "," Empate "," Ganaste "," Perdiste "," Fácil "," Medio "," Difícil "," Ganado "," ERROR: nombre no válido "," Máximo  12 caracteres "," Jugador 1 "," Jugador 2 "," Sonidos "," Tono de llamada "," Error "," Resultado ","v : 0.9"],
+,["Reproducir", "Configuración", "Salir", "<- atrás", "Guardar", "Solo", "Normal", "En línea", "Local", "Fácil", "Medio", "Agujero"  , "Idioma", "Acerca de", "Tema", "Portugués brasileño", "Español", "Inglés", "Francés", "Blanco", "Negro", "Autor: Lucas Gabriel da Silva Lima\nGitHub : Lucas836-hub\nInstagram : @Lucas_git", "Inicio  del proyecto: 11/12/2020 "," Esta aplicación fue creada para el conocimiento y abarca un juego multijugador con host local, en línea o contra arranque. "," Jugar de nuevo "," ERROR este lugar es  ocupado "," Sé el primero en jugar "," Empate "," Ganaste "," Perdiste "," Fácil "," Medio "," Difícil "," Ganado "," ERROR: nombre no válido "," Máximo  12 caracteres "," Jugador 1 "," Jugador 2 "," Sonidos "," Tono de llamada "," Error "," Resultado ","v : 1.0","OPS !!!\TODAVÍA ESTÁ EN DESARROLLO!"],
 
-["Play", "Settings", "Exit", "<- back", "Save", "Alone", "Normal", "Online", "Local", "Easy", "Medium", "Hole"  , "Language", "About", "Theme", "Brazilian Portuguese", "Spanish", "English", "French", "White", "Black", "Author: Lucas Gabriel da Silva Lima", "Home  of the project: 11/12/2020 ","This application was created for knowledge and it encompasses a multiplayer game with local host,online or against boot. "," Play again "," ERROR this place is  busy "," Be the first to play "," Draw "," You won "," You lost "," Easy "," Medium "," Hard "," Won "," ERROR: invalid name "," Maximum  12 character "," Player 1 "," Player 2 "," Sounds "," Ringtone "," Error "," Result ","v : 0.9"],
+["Play", "Settings", "Exit", "<- back", "Save", "Alone", "Normal", "Online", "Local", "Easy", "Medium", "Hole"  , "Language", "About", "Theme", "Brazilian Portuguese", "Spanish", "English", "French", "White", "Black", "Author: Lucas Gabriel da Silva Lima\nGitHub : Lucas836-hub\nInstagram : @Lucas_git", "Home  of the project: 11/12/2020 ","This application was created for knowledge and it encompasses a dualpaly game with local host,online or against boot. "," Play again "," ERROR this place is  busy "," Be the first to play "," Draw "," You won "," You lost "," Easy "," Medium "," Hard "," Won "," ERROR: invalid name "," Maximum  12 character "," Player 1 "," Player 2 "," Sounds "," Ringtone "," Error "," Result ","v : 1.0","OPS !!!\IT IS STILL IN DEVELOPMENT!"],
 
-["Lecture", "Paramètres", "Quitter", "<- retour", "Enregistrer", "Seul", "Normal", "En ligne", "Local", "Facile", "Moyen", "Trou"  , "Langue", "À propos de", "Thème", "Portugais brésilien", "Espagnol", "Anglais", "Français", "Blanc", "Noir", "Auteur: Lucas Gabriel da Silva Lima", "Accueil  du projet: 11/12/2020 ","Cette application a été créée pour la connaissance et elle englobe une partie multijoueur avec hôte local, en ligne ou contre le démarrage. "," Rejouer "," ERREUR cet endroit est  occupé "," Soyez le premier à jouer "," Dessiner "," Vous avez gagné "," Vous avez perdu "," Facile "," Moyen "," Difficile "," Gagné "," ERREUR: nom invalide "," Maximum  12 caractères "," Player 1 "," Player 2 "," Sounds "," Ringtone "," Error "," Result ","v : 0.9"]]
+["Lecture", "Paramètres", "Quitter", "<- retour", "Enregistrer", "Seul", "Normal", "En ligne", "Local", "Facile", "Moyen", "Trou"  , "Langue", "À propos de", "Thème", "Portugais brésilien", "Espagnol", "Anglais", "Français", "Blanc", "Noir", "Auteur: Lucas Gabriel da Silva Lima\nGitHub : Lucas836-hub\nInstagram : @Lucas_git", "Accueil  du projet: 11/12/2020 ","Cette application a été créée pour la connaissance et elle englobe une partie multijoueur avec hôte local, en ligne ou contre le démarrage. "," Rejouer "," ERREUR cet endroit est  occupé "," Soyez le premier à jouer "," Dessiner "," Vous avez gagné "," Vous avez perdu "," Facile "," Moyen "," Difficile "," Gagné "," ERREUR: nom invalide "," Maximum  12 caractères "," Player 1 "," Player 2 "," Sounds "," Ringtone "," Error "," Result ","v : 1.0","OPS !!!\IL EST ENCORE EN DÉVELOPPEMENT !"]]
 
 meu_icone=""
 icone_adversario=""
@@ -92,7 +87,10 @@ sec = None
 master2=tk
 resolucao=""
 
-caminho_imagem_fundo='image/images (16).jpeg'
+audio_sair=False
+audio_novamente=False
+
+caminho_imagem_fundo='/storage/emulated/0/pydroid/jogo da velha/image/images (16).jpeg'#'/storage/emulated/0/Download/fundo.jpeg'
 
 
 def porcento(comprimento,por):
@@ -199,7 +197,11 @@ class jogar(tk.Frame):
 		
 			
 		som_save()
-		global variavel_comando ,bg_geral ,idiom,master2,nome_do_adversario,meu_nome,caminho_imagem_fundo
+		global variavel_comando ,bg_geral ,idiom,master2,nome_do_adversario,meu_nome,caminho_imagem_fundo,audio_novamente,audio_sair
+		audio_novamente=False
+		if audio_sair:
+			som_sair()
+		audio_sair=False
 		
 		master.geometry(f'{master.winfo_screenwidth()}x{master.winfo_screenheight()}')
 		
@@ -230,9 +232,9 @@ class jogar(tk.Frame):
 		
 		tk.Button(master,width=28,fg=bg_geral[variavel_comando[0][0]][0],bg=bg_geral[variavel_comando[0][0]][1],text=idiom[variavel_comando[0][1]][6],command=self.normal).place(x=70,y=400)
 		
-		tk.Button(master,width=28,fg=bg_geral[variavel_comando[0][0]][0],bg=bg_geral[variavel_comando[0][0]][1],text=idiom[variavel_comando[0][1]][7]).place(x=70,y=500)
+		tk.Button(master,width=28,fg=bg_geral[variavel_comando[0][0]][0],bg=bg_geral[variavel_comando[0][0]][1],text=idiom[variavel_comando[0][1]][7],command=lambda: master.switch_frame(not_found)).place(x=70,y=500)
 		
-		tk.Button(master,width=28,fg=bg_geral[variavel_comando[0][0]][0],bg=bg_geral[variavel_comando[0][0]][1],text=idiom[variavel_comando[0][1]][8]).place(x=70,y=600)
+		tk.Button(master,width=28,fg=bg_geral[variavel_comando[0][0]][0],bg=bg_geral[variavel_comando[0][0]][1],text=idiom[variavel_comando[0][1]][8],command=lambda: master.switch_frame(not_found)).place(x=70,y=600)
 		
 		cursor.execute("SELECT * FROM nomes")
 		sghjh=cursor.fetchall()
@@ -270,8 +272,50 @@ class jogar(tk.Frame):
 					
 		nivel="embate normal"
 		master2.switch_frame(nome_normal)
+
+				
+class not_found(tk.Frame):
+	def __init__(self, master,*args, **kwargs):
+		tk.Frame.__init__(self, master ,  *args, **kwargs)
+		master.geometry(f'{master.winfo_screenwidth()}x{master.winfo_screenheight()}')
+		try:
+			pygame.mixer.music.stop()
+		except:
+			pass
 		
+			
+		som_save()
+		global variavel_comando ,bg_geral ,idiom,master2,nome_do_adversario,meu_nome,caminho_imagem_fundo
 		
+		master.geometry(f'{master.winfo_screenwidth()}x{master.winfo_screenheight()}')
+		
+		self.image_2 = Image.open(caminho_imagem_fundo)
+		
+		self.photo_2 = ImageTk.PhotoImage(self.image_2.resize((master.winfo_screenwidth(),master.winfo_screenheight())))#master.winfo_screenwidth(),master.winfo_screenheight())))
+		self.imagem = tk.Label(master,image = self.photo_2)
+		self.imagem.image = self.photo_2
+		self.imagem.place(x=0,y=0)
+		
+		limpar_tabela()
+		master2=master
+		
+		tk.Frame.__init__(self, master)
+		master["bg"]=bg_geral[variavel_comando[0][0]][1]
+		tk.Frame.__init__(self, master)
+		tk.Frame.configure(self,bg=bg_geral[variavel_comando[0][0]][1])
+		
+		tk.Button(master, text=idiom[variavel_comando[0][1]][3],relief="flat",width=porcento(int(master.winfo_screenwidth()),22),command=lambda: master.switch_frame(jogar)).place(x=0,y=0)
+		
+		tk.Button(master,relief="flat",width=porcento(int(master.winfo_screenwidth()),38)).place(x=198,y=0)
+		# porcento(int(master.winfo_screenwidth()),50)
+		tk.Button(master,relief="flat",width=porcento(int(master.winfo_screenwidth()),30)).place(x=504,y=0)
+		#porcento(int(master.winfo_screenwidth()),10)
+		tk.Label(master,width=porcento(int(master.winfo_screenwidth()),98),text=idiom[variavel_comando[0][1]][46],bg="gold2",fg="red4").place(x=50,y=300)
+		
+		#tk.Button(master,width=28,text=idiom[variavel_comando[0][1]][5],fg=bg_geral[variavel_comando[0][0]][0],bg=bg_geral[variavel_comando[0][0]][1],command=lambda: master.switch_frame(Sozinho)).place(x=70,y=300)
+
+		
+						
 class Sozinho(tk.Frame):
 	def __init__(self, master):
 		som_save()
@@ -403,7 +447,11 @@ class partida(tk.Frame):
 		except:
 			pass
 			
-		global variavel_comando ,bg_geral ,idiom,meu_icone,icone_adversario,minha_cor ,cor_adversaria,tabuleiro,master2,quem_comeca,troca_icone,nome_do_adversario,meu_nome,caminho_imagem_fundo
+		global variavel_comando ,bg_geral ,idiom,meu_icone,icone_adversario,minha_cor ,cor_adversaria,tabuleiro,master2,quem_comeca,troca_icone,nome_do_adversario,meu_nome,caminho_imagem_fundo,audio_novamente,audio_sair
+		
+		audio_sair=True
+		if audio_novamente:
+			som_novamente()
 		
 		self.image_2 = Image.open(caminho_imagem_fundo)
 		
@@ -1422,7 +1470,8 @@ def limpar_tabela():
 class vencedor(tk.Frame):
 	def __init__(self, master):
 		som_save()
-		global variavel_comando ,bg_geral ,idiom,meu_icone,icone_ganhador,minha_cor,cor_adversaria,meu_nome,nome_do_adversario,caminho_imagem_fundo
+		global variavel_comando ,bg_geral ,idiom,meu_icone,icone_ganhador,minha_cor,cor_adversaria,meu_nome,nome_do_adversario,caminho_imagem_fundo,audio_novamente
+		audio_novamente=True
 		
 		master.geometry(f'{master.winfo_screenwidth()}x{master.winfo_screenheight()}')
 		
@@ -1784,13 +1833,13 @@ class sobre(tk.Frame):
 		tk.Button(master,relief="flat", width=porcento(int(master.winfo_screenwidth()),30)).place(x=504,y=0)
 		
 		
-		tk.Label(master,text=idiom[variavel_comando[0][1]][21],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0],anchor="w").place(x=20,y=200)
+		tk.Label(master,text=idiom[variavel_comando[0][1]][21]+'5',bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0],anchor="w").place(x=20,y=200)
 		
-		tk.Label(master,text=idiom[variavel_comando[0][1]][22],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0],anchor="w").place(x=20,y=270)
+		tk.Label(master,text=idiom[variavel_comando[0][1]][22],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0],anchor="w").place(x=20,y=370)
 		
-		tk.Label(master,wraplength=int(master.winfo_screenwidth())-40,text=idiom[variavel_comando[0][1]][23],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0]).place(x=20,y=350)
+		tk.Label(master,wraplength=int(master.winfo_screenwidth())-40,text=idiom[variavel_comando[0][1]][23],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0]).place(x=20,y=440)
 		
-		tk.Label(master,wraplength=int(master.winfo_screenwidth())-20,text=idiom[variavel_comando[0][1]][45],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0]).place(x=20,y=500)
+		tk.Label(master,wraplength=int(master.winfo_screenwidth())-20,text=idiom[variavel_comando[0][1]][45],bg=bg_geral[variavel_comando[0][0]][1], fg=bg_geral[variavel_comando[0][0]][0]).place(x=20,y=600)
 		
 
 def som_erro():
@@ -1841,6 +1890,28 @@ def som_save():
 			pygame.mixer.music.load('sons/som_save.mp3')
 			pygame.mixer.music.play()
 			pygame.event.wait()
+			
+def som_novamente():
+		cursor.execute("SELECT * FROM sons")
+		vshjej=cursor.fetchall()
+		if(vshjej[0][2] == "True"):
+			audio=os.listdir('sons/audio interativo/denovo')
+			audio_selec='sons/audio interativo/denovo/'+str(audio[randint(0,len(audio)-1)])
+			pygame.init()
+			pygame.mixer.music.load(audio_selec)
+			pygame.mixer.music.play()
+			pygame.event.wait()
+
+def som_sair():
+		cursor.execute("SELECT * FROM sons")
+		vshjej=cursor.fetchall()
+		if(vshjej[0][2] == "True"):
+			audio=os.listdir('sons/audio interativo/sair')
+			audio_selec='sons/audio interativo/sair/'+str(audio[randint(0,len(audio)-1)])
+			pygame.init()
+			pygame.mixer.music.load(audio_selec)
+			pygame.mixer.music.play()
+			pygame.event.wait()			
 		
 def som_resultado():
 		cursor.execute("SELECT * FROM sons")
