@@ -1,6 +1,10 @@
 # Jogo_da_Velha
 jogo da velha feito em python muito diverto , ele usa áudio de memes para melhorar a sua experiência. :smiley_cat:
 
+Feito 100% pelo pydroid 👨🏽‍💻
+https://play.google.com/store/apps/details?id=ru.iiec.pydroid3
+
+
 <div align="center">
 <img src="https://user-images.githubusercontent.com/70550900/216488962-869dc7eb-f7cc-418c-aa73-9da39f9296a1.png" width="300px" height="550px" />
 </div>
